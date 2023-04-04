@@ -1,15 +1,15 @@
-public void calculateShapeArea(String shapeType, int side, int width) {
+public void calc(int type, int side, int width) {
     // creates a new variable
     int area = 0;
 
     // check for shape types
-    if (shapeType == "Square") {
+    if (type == 1) {
         // square is side squared
         area = side * side;
-    } else if (shapeType == "Rectangle") {
+    } else if (type == 2) {
         // rectangle is width times height
         area = side * width;
-    } else if (shapeType == "Circle") {
+    } else if (type == 3) {
         // circle is pi times radius squared
         area = 3.14 * side * side;
     }
@@ -27,8 +27,8 @@ class Main {
         int circleRadius = 10;
 
         // getting areas
-        calculateShapeArea("Square", squareSide, 0);
-        calculateShapeArea("Rectangle", rectangleWidth, rectangleHeight);
-        calculateShapeArea("Circle", circleRadius, 0);
+        calc(1, squareSide, 0);
+        calc(2, rectangleWidth, rectangleHeight);
+        calc(3, circleRadius, 0);
     }
 }
